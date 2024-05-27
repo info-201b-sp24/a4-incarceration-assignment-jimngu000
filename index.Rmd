@@ -62,9 +62,10 @@ The first chart that you will create and include will show the trend over time o
 When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
 
 Here's an example of how to run an R script inside an RMarkdown file:
-
-```{r, echo = FALSE, code = readLines("chart1_example.R")}
+```{r, echo = FALSE, code = readLines("chart1.R")}
 ```
+
+For my first chart I decided to create a lineplot showcasing the average prison population rate per 100,000 people in the U.S., separated by race. I chose to focus on the rate of black prison incarceration vs. white prison incarceration to highlight the disparity between the two. In my chart, we can see that the average rate of black prison incarcerations remained significantly higher than the average rate of white prison incarcertations throughout all the years maintained within the dataset, with the former peaking at slightly under 2000 between 2000 and 2010 and the latter only recently increasing past 500.
 
 ### Variable Comparison Chart
 
@@ -86,3 +87,7 @@ The last chart that you will create and include will show how a variable is dist
 - Your color scale needs a legend with a clear label
 - Use a map based coordinate system to set the aspect ratio of your map
 
+```{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("map.R")}
+```
+
+For my third chart, I decided to examine black prison incarceration rates, specifically in Washington. I focused in on the year 2016, as it was the most recent year with a reliable amount of data to use in my calculations. I wanted to examine if there were any major differences in the incarceration rates for individuals of color across different counties in Washington, and found that in 2016, Lewis County had a considerably higher incarceration rate for individuals of color compared to other counties in Washington (above 4000 per 100,000 people).
