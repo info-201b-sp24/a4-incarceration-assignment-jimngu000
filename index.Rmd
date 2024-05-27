@@ -7,6 +7,8 @@ output: html_document
 
 An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
 
+The over-policing of individuals of color is one of the most apparent examples of racism in the modern-day world, which directly leads into disproportionate levels of incarceration across the entirety of the U.S. In this report, I seek to mainly analyze the prison population rate per 100,000 people per county/state in the U.S. This is because I want to examine any trends in terms of how this rate might differ across different races, and how rates have increased/decreased over the recent years in general. 
+
 ### Summary Information
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
@@ -29,6 +31,15 @@ How many features (columns) are in the data?
 What, if any, ethical questions or questions of power do you need to consider when working with this data?  
 What are possible limitations or problems with this data?   (at least 200 words)
 
+The datasets used in this report originate from the [Vera Institute]( https://github.com/vera-institute/incarceration-trends). The datasets were collected as part of a project that employed two Bureau of Justice Statistics data collections: the Census of Jails (conducted every 5-8 years since 1970) and the Annual Survey of Jails (conducted in non-census years since 1982). The data was collected as a means of analyzing trends in incarceration rates within the U.S. in the past few decades. Additionally, the collection of county-level data being used as opposed to only state-level data makes it easier to analyze these trends, as it is mainly county officials that decide how communities use incarceration. 
+
+[The first dataset (prison/jail population rate per 100,000 people per county/state)](https://github.com/melaniewalsh/Neat-Datasets/blob/main/us-prison-jail-rates.csv?raw=true) contains a total of 158,811 observations and 23 features.
+
+[The second dataset (prison/jail population rate per 100,000 people per county/state since 1990)](https://raw.githubusercontent.com/melaniewalsh/Neat-Datasets/main/us-prison-jail-rates-1990.csv) contains a total of 91,031 observations and 23 features.
+
+I think an important ethical question when working with data like thinking about how any potential bias was Identified and/or minimized when collecting the data. Another important question to consider might be if there are any potential common misinterpretations of the dataset, and how we could go about avoiding those misinterpretations.
+
+Finally, a major limitation with the datasets might include the fact that some observations do not have data collected for certain features (for example, the total jail population rate for Autauga County, AL is missing for the year 1970). This might create some complications when searching for trends later if they are dependent on certain years’ data.
 
 ### Trends Over Time Chart
 
