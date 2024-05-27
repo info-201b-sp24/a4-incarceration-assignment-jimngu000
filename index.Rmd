@@ -21,6 +21,8 @@ These will likely be calculated using your DPLYR skills, answering questions suc
 
 Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
 
+In my research, the first thing I decided to focus on was the average black prison population rates and white prison population rates per 100,000 people across all the years in the dataset. I found that, on average, the prison population rate is **2785** for black people and **437** for white people, per 100,000 people across all counties/states in the U.S. I looked into calculating the ratio of black-to-white prison population rates using these numbers, which came out to roughly **6.37:1**, meaning that for each white person incarcerated in prison, there were roughly **six** black people incarcerated. This high ratio of black incarcerations points to a disparity in the level of policing between black and white people and points toward the level of racism present within our society. Finally, I decided to look into the places with the highest black and white prison population rates in 2016 (since it was the most recent year in the dataset with a reliable amount of data). I found that the county with the highest black prison population rate in 2016 was **Madison County, NC** with a staggering rate of **38,461.54**, while the place with the highest white prison population rate was **McPherson County, NE** with a rate of **4,081.63**. Even honing in on a specific year, we can see that there is a large gap in the frequency in which black and white people are incarcerated into prison.
+
 ### The Dataset
 
 Who collected the data?  
