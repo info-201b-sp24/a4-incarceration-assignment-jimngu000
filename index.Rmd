@@ -5,22 +5,9 @@ output: html_document
 
 ### Introduction
 
-An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
-
 The over-policing of individuals of color is one of the most apparent examples of racism in the modern-day world, which directly leads into disproportionate levels of incarceration across the entirety of the U.S. In this report, I seek to mainly analyze the prison population rate per 100,000 people per county/state in the U.S. This is because I want to examine any trends in terms of how this rate might differ across different races, and how rates have increased/decreased over the recent years in general. 
 
 ### Summary Information
-
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as: 
-
-- What is the average value of my variable across all the counties (in the current year)?
-- Where is my variable the highest / lowest?
-- How much has my variable change over the last N years?
-
-Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
-
 ```{r, echo = FALSE, message = FALSE, code = readLines("summary.R")}
 ```
 In my research, the first thing I decided to focus on was the average black prison population rates and white prison population rates per 100,000 people across all the years in the dataset. I found that, on average, the prison population rate is **2785** for black people and **437** for white people, per 100,000 people across all counties/states in the U.S. I looked into calculating the ratio of black-to-white prison population rates using these numbers, which came out to roughly **6.37:1**, meaning that for each white person incarcerated in prison, there were roughly **six** black people incarcerated. This high ratio of black incarcerations points to a disparity in the level of policing between black and white people and points toward the level of racism present within our society.
@@ -28,14 +15,6 @@ In my research, the first thing I decided to focus on was the average black pris
 Finally, I decided to look into the places with the highest black and white prison population rates in 2016 (since it was the most recent year in the dataset with a reliable amount of data). I found that the county with the highest black prison population rate in 2016 was **Madison County, NC** with a staggering rate of **38,461.54**, while the place with the highest white prison population rate was **McPherson County, NE** with a rate of **4,081.63**. Even honing in on a specific year, we can see that there is a large gap in the frequency in which black and white people are incarcerated into prison.
 
 ### The Dataset
-
-Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
 
 The datasets used in this report originate from the [Vera Institute]( https://github.com/vera-institute/incarceration-trends). The datasets were collected as part of a project that employed two Bureau of Justice Statistics data collections: the Census of Jails (conducted every 5-8 years since 1970) and the Annual Survey of Jails (conducted in non-census years since 1982). The data was collected as a means of analyzing trends in incarceration rates within the U.S. in the past few decades. Additionally, the collection of county-level data being used as opposed to only state-level data makes it easier to analyze these trends, as it is mainly county officials that decide how communities use incarceration. 
 
@@ -48,45 +27,18 @@ I think an important ethical question when working with data like thinking about
 Finally, a major limitation with the datasets might include the fact that some observations do not have data collected for certain features (for example, the total jail population rate for Autauga County, AL is missing for the year 1970). This might create some complications when searching for trends later if they are dependent on certain years’ data.
 
 ### Trends Over Time Chart
-
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The first chart that you will create and include will show the trend over time of your variable/topic. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - This may mean showing the same measure for different locations or different racial groups. Think carefully about a meaningful comparison of locations (e.g., the top 10 counties in a state, top 10 states, etc.)
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
 ```{r, echo = FALSE, code = readLines("chart1.R")}
 ```
 
 For my first chart I decided to create a lineplot showcasing the average prison population rate per 100,000 people in the U.S., separated by race. I chose to focus on the rate of black prison incarceration vs. white prison incarceration to highlight the disparity between the two. In my chart, we can see that the average rate of black prison incarcerations remained significantly higher than the average rate of white prison incarcertations throughout all the years maintained within the dataset, with the former peaking at slightly under 2000 between 2000 and 2010 and the latter only recently increasing past 500.
 
 ### Variable Comparison Chart
+```{r, echo = FALSE, code = readLines("chart2.R")}
+```
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show how two different (continuous) variables are related to one another. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- If you choose to add a color encoding (not required), you need a legend for your different color and a clear legend title
+For my second chart, I wanted to examine if there were any correlations between the black prison incarceration rate within a county and the total population count of that county. Instead of going by individual counties, I decided to average over all counties in an individual state for both axes. I used a scatterplot for this, and found that there was a small concentration of rates of roughly 1000-2000 people in counties with an average population total less than 125,000. Also, there were some outliers; there was a state with an average county population of over 1,125,000 with a rate of black prison incarceration of less than 500. On the opposite end of the scale, there were states with average county populations of less than 250,000 with a black prison incarceration rate of over 4000.
 
 ### Map
-
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The last chart that you will create and include will show how a variable is distributed geographically. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Your map needs a title
-- Your color scale needs a legend with a clear label
-- Use a map based coordinate system to set the aspect ratio of your map
-
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("map.R")}
 ```
 
